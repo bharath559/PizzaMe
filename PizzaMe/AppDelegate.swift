@@ -8,6 +8,9 @@
 
 import UIKit
 
+var sharedLocationInstance:LocationManager?
+var networkSharedInstance:NetworkManager?
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+      
+        //sharedLocationInstance = LocationManager()
+        
+       sharedLocationInstance = LocationManager.sharedLocationManager
+       networkSharedInstance = NetworkManager.sharedInstance
+
         return true
     }
 
