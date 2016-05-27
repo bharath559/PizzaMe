@@ -37,11 +37,8 @@ class LocationManager:NSObject, CLLocationManagerDelegate{
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        
         NSThread.sleepForTimeInterval(0.10)
-        
         locationmanager.stopUpdatingLocation()
-       
         startLocation = locations[locations.count - 1]
         self.convertLocationToPostalCode(startLocation!)
     }
@@ -71,7 +68,4 @@ class LocationManager:NSObject, CLLocationManagerDelegate{
         }
        
     }
-    
-       
-    
 }

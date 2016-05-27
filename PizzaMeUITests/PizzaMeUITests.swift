@@ -7,30 +7,60 @@
 //
 
 import XCTest
+import UIKit
 
 class PizzaMeUITests: XCTestCase {
-        
+    
+    var systemUnderTest:UITableViewController!
+    
     override func setUp() {
         super.setUp()
         
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
+        //continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+       
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
+        
+        //get the ViewController we want to test from the storyboard (note the identifier is the id explicitly set in the identity inspector)
+        systemUnderTest = storyboard.instantiateViewControllerWithIdentifier("PizzaListTableViewController") as! UITableViewController
+        
+        //load view hierarchy
+        _ = systemUnderTest.view
+      
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSUT_TableViewIsNotNilAfterViewDidLoad() {
+        
+        XCTAssertNotNil(systemUnderTest.tableView)
+    }
+    
+    func testSUT_ShouldSetTableViewDataSource() {
+        
+        XCTAssertNotNil(systemUnderTest.tableView.dataSource)
+    }
+    
+    func testSUT_ShouldSetTableViewDelegate() {
+        
+        XCTAssertNotNil(systemUnderTest.tableView.dataSource)
+    }
+    
+    
+    
+    func testExample(){
+        
+//        XCUIDevice.sharedDevice().orientation = .FaceUp
+//        XCUIDevice.sharedDevice().orientation = .FaceUp
+//        
+//        let app = XCUIApplication()
+//        app.tables.childrenMatchingType(.Cell).elementBoundByIndex(0).staticTexts["Patzeria Perfect Pizza"].tap()
+//        XCTAssert (app.buttons["231 W 46th St New York NY"].exists)
+        
     }
     
 }

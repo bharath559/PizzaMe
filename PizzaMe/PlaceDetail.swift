@@ -38,14 +38,19 @@ class PlaceDetail{
     
     func getDataFromJson(jsonArray:NSArray) -> Void{
         
-        for eachDetail in jsonArray{
+       
+        print(placeDetailArray.count)
+       
             
-            let placeDetail = PlaceDetail(name: eachDetail["Title"] as! String, address: eachDetail["Address"] as! String, city: eachDetail["City"] as! String, state: eachDetail["Phone"] as! String, phoneNumber: eachDetail["Distance"] as! String, distance: eachDetail["Distance"] as! String, mapUrl: eachDetail["MapUrl"] as! String)
-           placeDetailArray.append(placeDetail)
+            print(jsonArray)
+            for eachDetail in jsonArray{
+                
+                let placeDetail = PlaceDetail(name: eachDetail["Title"] as! String, address: eachDetail["Address"] as! String, city: eachDetail["City"] as! String, state: eachDetail["State"] as! String, phoneNumber: eachDetail["Phone"] as! String, distance: eachDetail["Distance"] as! String, mapUrl: eachDetail["MapUrl"] as! String)
+                placeDetailArray.append(placeDetail)
+                
             
         }
-        print(placeDetailArray)
-        
+
     }
     
 }

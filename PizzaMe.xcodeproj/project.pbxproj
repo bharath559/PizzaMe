@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA4657D51CF785CE0040421C /* PizzaListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4657D41CF785CE0040421C /* PizzaListTableViewController.swift */; };
+		DA4657D61CF8CC310040421C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE7630F1CF602730087A98B /* Main.storyboard */; };
 		DAB066A61CF6A43500E53EE6 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB066A51CF6A43500E53EE6 /* DetailTableViewCell.swift */; };
+		DAB505D11CF751C000708554 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB505D01CF751C000708554 /* DetailViewController.swift */; };
 		DAE7630C1CF602730087A98B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7630B1CF602730087A98B /* AppDelegate.swift */; };
-		DAE7630E1CF602730087A98B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7630D1CF602730087A98B /* ViewController.swift */; };
-		DAE763111CF602730087A98B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE7630F1CF602730087A98B /* Main.storyboard */; };
 		DAE763131CF602730087A98B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE763121CF602730087A98B /* Assets.xcassets */; };
 		DAE763161CF602730087A98B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE763141CF602730087A98B /* LaunchScreen.storyboard */; };
 		DAE763211CF602730087A98B /* PizzaMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE763201CF602730087A98B /* PizzaMeTests.swift */; };
@@ -39,10 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA4657D41CF785CE0040421C /* PizzaListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaListTableViewController.swift; sourceTree = "<group>"; };
 		DAB066A51CF6A43500E53EE6 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		DAB505D01CF751C000708554 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DAE763081CF602730087A98B /* PizzaMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE7630B1CF602730087A98B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAE7630D1CF602730087A98B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DAE763101CF602730087A98B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAE763121CF602730087A98B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAE763151CF602730087A98B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,7 +111,6 @@
 			children = (
 				DAE7633C1CF639420087A98B /* LocationManager.swift */,
 				DAE7630B1CF602730087A98B /* AppDelegate.swift */,
-				DAE7630D1CF602730087A98B /* ViewController.swift */,
 				DAE7630F1CF602730087A98B /* Main.storyboard */,
 				DAE763121CF602730087A98B /* Assets.xcassets */,
 				DAE763141CF602730087A98B /* LaunchScreen.storyboard */,
@@ -118,6 +119,7 @@
 				DAE763401CF640360087A98B /* PlaceDetail.swift */,
 				DAE763421CF647890087A98B /* PizzaListTableViewController.swift */,
 				DAB066A51CF6A43500E53EE6 /* DetailTableViewCell.swift */,
+				DAB505D01CF751C000708554 /* DetailViewController.swift */,
 			);
 			path = PizzaMe;
 			sourceTree = "<group>";
@@ -136,6 +138,7 @@
 			children = (
 				DAE7632B1CF602730087A98B /* PizzaMeUITests.swift */,
 				DAE7632D1CF602730087A98B /* Info.plist */,
+				DA4657D41CF785CE0040421C /* PizzaListTableViewController.swift */,
 			);
 			path = PizzaMeUITests;
 			sourceTree = "<group>";
@@ -244,9 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4657D61CF8CC310040421C /* Main.storyboard in Resources */,
 				DAE763161CF602730087A98B /* LaunchScreen.storyboard in Resources */,
 				DAE763131CF602730087A98B /* Assets.xcassets in Resources */,
-				DAE763111CF602730087A98B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,10 +277,10 @@
 				DAE763431CF647890087A98B /* PizzaListTableViewController.swift in Sources */,
 				DAE7633F1CF6395C0087A98B /* NetworkManager.swift in Sources */,
 				DAB066A61CF6A43500E53EE6 /* DetailTableViewCell.swift in Sources */,
-				DAE7630E1CF602730087A98B /* ViewController.swift in Sources */,
 				DAE7630C1CF602730087A98B /* AppDelegate.swift in Sources */,
 				DAE7633D1CF639420087A98B /* LocationManager.swift in Sources */,
 				DAE763411CF640360087A98B /* PlaceDetail.swift in Sources */,
+				DAB505D11CF751C000708554 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4657D51CF785CE0040421C /* PizzaListTableViewController.swift in Sources */,
 				DAE7632C1CF602730087A98B /* PizzaMeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

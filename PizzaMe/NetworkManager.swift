@@ -11,7 +11,7 @@ import Foundation
 
 class NetworkManager{
     
-    let baseUrlString = "https://query.yahooapis.com/v1/public/yql?q=select * from local.search where zip='23508'"
+    var baseUrlString = "https://query.yahooapis.com/v1/public/yql?q=select * from local.search where zip="
     static let sharedInstance = NetworkManager()
     
     
@@ -40,8 +40,8 @@ class NetworkManager{
                         let placeDetail = PlaceDetail()
                         
                         placeDetail.getDataFromJson(placesArray!)
+                        
                     }
-                    
                 }
                 
             }
@@ -55,11 +55,10 @@ class NetworkManager{
     
     func buildParameters(zipcode:String) -> String{
         
+      let baseUrlStringWithZip = baseUrlString+"'"+zipcode+"'"
+      let finalUrl = baseUrlStringWithZip.stringByAppendingString(" and query='pizza'&format=json&diagnostics=true&callback=")
         
-        let finalUrl = baseUrlString.stringByAppendingString(" and query='pizza'&format=json&diagnostics=true&callback=")
-        print(finalUrl)
-        
-        return finalUrl
+      return finalUrl
         
     }
     
